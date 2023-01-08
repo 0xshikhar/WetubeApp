@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 export default function UploadInput(props) {
   const [video, setVideo] = useState("");
   const videoRef = useRef();
+  const videoCurrent : any = videoRef.current;
 
   const handleInput = (e) => {
     setVideo(URL.createObjectURL(e.target.files[0]));
@@ -13,7 +14,7 @@ export default function UploadInput(props) {
   return (
     <div
       onClick={() => {
-        videoRef.current.click();
+        videoCurrent.click();
       }}
       className={
         video
