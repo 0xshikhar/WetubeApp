@@ -68,15 +68,14 @@ export default function Upload() {
     // Upload the video to the contract
 
     await contract.uploadVideo(
-      data.video,
-      data.title,
-      data.description,
-      data.location,
-      data.category,
-      data.thumbnail,
-      false,
-      data.UploadedDate
-    )
+      video,
+      title,
+      description,
+      location,
+      category,
+      thumbnail,
+      UploadedDate
+    );
   }
 
   return (
